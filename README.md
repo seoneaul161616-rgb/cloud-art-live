@@ -6,3 +6,9 @@ GitHub Pages 로 공개되는 정적 사이트이며, 소스 코드는 비공개
 
 - ○ 동그라미: 뭉게구름 · △ 세모: 먹구름과 비 · □ 네모: 옅게 넓게 퍼지는 구름
 - iPad Safari 에서 열고 공유 → "홈 화면에 추가" 하면 전체화면 앱처럼 실행됩니다.
+
+## VR 버전 (Meta Quest 2)
+
+`vr/` 폴더: Quest 브라우저에서 https://seoneaul161616-rgb.github.io/cloud-art-live/vr/ 를 열고 "VR 시작".
+A 뭉게구름 · B 먹구름과 비 · Y 퍼진 구름 · X 시점 이동 · 스틱으로 날기/회전.
+소스는 비공개 저장소 `cowave-web` 의 `cloud-vr/` 프로젝트입니다.

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b1018" />
+    <link rel="icon" type="image/png" href="./cloud-icon-192.png" />
+    <title>손으로 빚는 구름 VR</title>
+    <script type="module" crossorigin src="./assets/index-D6Zd5hSF.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CU8HmKQk.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <section id="overlay" aria-labelledby="title">
+      <div class="card">
+        <p class="kicker">Meta Quest 2 · WebXR</p>
+        <h1 id="title">손으로 빚는 구름 VR</h1>
+        <p class="lead">거대한 복셀 구름 사이를 날아다니며 여러 각도에서 바라보세요. 버튼으로 날씨를 바꾸면 비가 내 머리 위로 쏟아집니다.</p>
+        <dl class="keys">
+          <div><dt>A</dt><dd>뭉게구름</dd></div>
+          <div><dt>B</dt><dd>먹구름 · 비 · 천둥</dd></div>
+          <div><dt>Y</dt><dd>옅게 넓게 퍼진 구름</dd></div>
+          <div><dt>X</dt><dd>다음 시점으로 이동 (지상 → 구름 아래 → 옆 → 속 → 위)</dd></div>
+          <div><dt>왼 스틱</dt><dd>바라보는 방향으로 날기 · 트리거를 누르면 빠르게</dd></div>
+          <div><dt>오른 스틱</dt><dd>좌우 30° 회전 · 상하로 오르내리기</dd></div>
+        </dl>
+        <p id="status" class="status" role="status"></p>
+        <div class="actions">
+          <button id="enter-vr" class="primary">VR 시작</button>
+          <button id="look" class="ghost">화면으로 둘러보기</button>
+        </div>
+      </div>
+    </section>
+
+    <aside id="hint" hidden>
+      <p><b>드래그</b> 둘러보기 · <b>WASD</b> 이동 · <b>Q/E</b> 아래/위 · <b>Shift</b> 빠르게</p>
+      <p><b>1</b> 뭉게구름 · <b>2</b> 먹구름 · <b>3</b> 퍼진 구름 · <b>0</b> 맑음 · <b>V</b> 다음 시점</p>
+      <button id="hint-close">처음 화면</button>
+    </aside>
+
+  </body>
+</html>
