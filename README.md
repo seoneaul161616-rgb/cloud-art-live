@@ -17,3 +17,7 @@ A 뭉게구름 · B 먹구름과 비 · Y 퍼진 구름 · X 시점 이동 · �
 
 `cubes/` 폴더: Quest 브라우저에서 https://seoneaul161616-rgb.github.io/cloud-art-live/cubes/ → "VR 시작".
 하늘에서 떨어지는 하얀 디지털 큐브를 피하세요. 한 번이라도 닿으면 게임 오버. 트리거로 시작.
+
+### 큐브 레인 클래식 (v0.5 보관본)
+
+`cubes-classic/`: 원형 경기장에서 큐브를 피하는 처음 버전. https://seoneaul161616-rgb.github.io/cloud-art-live/cubes-classic/
