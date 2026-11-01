@@ -6,12 +6,14 @@
     <meta name="theme-color" content="#3aa6d8" />
     <link rel="icon" type="image/png" href="./cube-icon-192.png" />
     <title>큐브 레인 VR</title>
-    <script type="module" crossorigin src="./assets/index-DZe7PNgW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bt-CK_xm.css">
+    <script type="module" crossorigin src="./assets/index-DfR3tTKc.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DjfCyT9T.css">
   </head>
   <body>
     <div id="app"></div>
     <div id="hud" hidden></div>
+    <div id="crosshair" hidden aria-hidden="true"></div>
+    <p id="lock-hint" hidden>화면을 클릭하면 마우스로 시점을 돌릴 수 있어요 · Esc 로 해제</p>
 
     <section id="overlay" aria-labelledby="title">
       <div class="card">
@@ -20,10 +22,23 @@
         <p class="lead">하얗게 얼어붙은 세상, 구름 한 점 없는 시안 하늘에서 디지털 큐브가 쏟아집니다. 크기도 모양도 제각각. 머리·몸·손 어디든 한 번이라도 닿으면 그대로 얼어붙어요.</p>
         <dl class="keys">
           <div><dt>트리거</dt><dd>시작 · 다시 시작</dd></div>
+          <div><dt>A</dt><dd>점프</dd></div>
           <div><dt>왼 스틱</dt><dd>이동 (몸을 직접 움직여 피해도 돼요)</dd></div>
           <div><dt>오른 스틱</dt><dd>좌우 30° 회전</dd></div>
           <div><dt>바닥 표시</dt><dd>시안 사각형이 짙어질수록 곧 떨어질 자리</dd></div>
         </dl>
+        <div class="music">
+          <div class="music-row">
+            <span class="music-label">배경음악</span>
+            <span id="music-name" class="music-name">선택 안 됨</span>
+          </div>
+          <div class="music-row">
+            <label for="music-file" class="ghost small">음악 파일 고르기</label>
+            <input id="music-file" type="file" accept="audio/*" hidden />
+            <button id="music-clear" type="button" class="ghost small" hidden>지우기</button>
+          </div>
+          <p class="note">가지고 있는 「Alice in 냉동고 (inst)」 같은 음악 파일을 고르면 이 기기 안에서만 반복 재생돼요. 파일은 어디에도 올라가지 않고, 다음 접속 때도 기억됩니다. 게임 오버 때는 음악이 얼어붙듯 먹먹해져요.</p>
+        </div>
         <p class="safety">주변 1.5m 안에 부딪힐 물건이 없는지 확인하고, 가디언 경계를 설정해 주세요.</p>
         <p id="status" class="status" role="status"></p>
         <div class="actions">
@@ -34,7 +49,7 @@
     </section>
 
     <aside id="hint" hidden>
-      <p><b>Space</b> 시작 · <b>드래그</b> 둘러보기 · <b>WASD</b> 이동</p>
+      <p><b>클릭</b> 마우스 잠금·시작 · <b>마우스</b> 시점 · <b>WASD</b> 이동 · <b>Space</b> 점프 · <b>Enter</b> 시작 · <b>Esc</b> 잠금 해제</p>
       <button id="hint-close">처음 화면</button>
     </aside>
 
