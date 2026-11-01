@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#2f6fd6" />
+    <link rel="icon" type="image/png" href="./cube-icon-192.png" />
+    <title>큐브 레인 VR</title>
+    <script type="module" crossorigin src="./assets/index-MYw6dPdh.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-bUO_AkRA.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="hud" hidden></div>
+
+    <section id="overlay" aria-labelledby="title">
+      <div class="card">
+        <p class="kicker">Meta Quest 2 · WebXR 게임</p>
+        <h1 id="title">큐브 레인</h1>
+        <p class="lead">구름 한 점 없는 하늘에서 하얀 디지털 큐브가 쏟아집니다. 크기도 모양도 제각각. 머리·몸·손 어디든 한 번이라도 닿으면 게임 오버예요.</p>
+        <dl class="keys">
+          <div><dt>트리거</dt><dd>시작 · 다시 시작</dd></div>
+          <div><dt>왼 스틱</dt><dd>이동 (몸을 직접 움직여 피해도 돼요)</dd></div>
+          <div><dt>오른 스틱</dt><dd>좌우 30° 회전</dd></div>
+          <div><dt>바닥 표시</dt><dd>파란 사각형이 짙어질수록 곧 떨어질 자리</dd></div>
+        </dl>
+        <p class="safety">주변 1.5m 안에 부딪힐 물건이 없는지 확인하고, 가디언 경계를 설정해 주세요.</p>
+        <p id="status" class="status" role="status"></p>
+        <div class="actions">
+          <button id="enter-vr" class="primary">VR 시작</button>
+          <button id="look" class="ghost">화면으로 해 보기</button>
+        </div>
+      </div>
+    </section>
+
+    <aside id="hint" hidden>
+      <p><b>Space</b> 시작 · <b>드래그</b> 둘러보기 · <b>WASD</b> 이동</p>
+      <button id="hint-close">처음 화면</button>
+    </aside>
+
+  </body>
+</html>
