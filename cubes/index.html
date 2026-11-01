@@ -7,8 +7,8 @@
     <meta http-equiv="Cache-Control" content="no-cache" />
     <link rel="icon" type="image/png" href="./cube-icon-192.png" />
     <title>큐브 레인 VR</title>
-    <script type="module" crossorigin src="./assets/index-Bd1utU8K.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BXUnQSSF.css">
+    <script type="module" crossorigin src="./assets/index-j7AMk5qL.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-C6gHZ6O7.css">
   </head>
   <body>
     <div id="app"></div>
@@ -18,7 +18,7 @@
 
     <section id="overlay" aria-labelledby="title">
       <div class="card">
-        <p class="kicker">Meta Quest 2 · WebXR 게임 · Frozen Sky <span class="ver">v0.4 · FPS 시점 · 점프</span></p>
+        <p class="kicker">Meta Quest 2 · WebXR 게임 · Frozen Sky <span class="ver">v0.5 · 배경음악</span></p>
         <h1 id="title">큐브 레인</h1>
         <p class="lead">하얗게 얼어붙은 세상, 구름 한 점 없는 시안 하늘에서 디지털 큐브가 쏟아집니다. 크기도 모양도 제각각. 머리·몸·손 어디든 한 번이라도 닿으면 그대로 얼어붙어요.</p>
         <dl class="keys">
@@ -28,18 +28,7 @@
           <div><dt>오른 스틱</dt><dd>좌우 30° 회전</dd></div>
           <div><dt>바닥 표시</dt><dd>시안 사각형이 짙어질수록 곧 떨어질 자리</dd></div>
         </dl>
-        <div class="music">
-          <div class="music-row">
-            <span class="music-label">배경음악</span>
-            <span id="music-name" class="music-name">선택 안 됨</span>
-          </div>
-          <div class="music-row">
-            <label for="music-file" class="ghost small">음악 파일 고르기</label>
-            <input id="music-file" type="file" accept="audio/*" hidden />
-            <button id="music-clear" type="button" class="ghost small" hidden>지우기</button>
-          </div>
-          <p class="note">가지고 있는 「Alice in 냉동고 (inst)」 같은 음악 파일을 고르면 이 기기 안에서만 반복 재생돼요. 파일은 어디에도 올라가지 않고, 다음 접속 때도 기억됩니다. 게임 오버 때는 음악이 얼어붙듯 먹먹해져요.</p>
-        </div>
+        <p class="music-credit">♪ 배경음악 — 「Alice in 냉동고 (Instrumental, extended)」 · 시작하면 흘러나와요</p>
         <p class="safety">주변 1.5m 안에 부딪힐 물건이 없는지 확인하고, 가디언 경계를 설정해 주세요.</p>
         <p id="status" class="status" role="status"></p>
         <div class="actions">
@@ -50,7 +39,7 @@
     </section>
 
     <aside id="hint" hidden>
-      <p><b>클릭</b> 마우스 잠금·시작 · <b>마우스</b> 시점 · <b>WASD</b> 이동 · <b>Space</b> 점프 · <b>Enter</b> 시작 · <b>Esc</b> 잠금 해제</p>
+      <p><b>클릭</b> 마우스 잠금·시작 · <b>마우스</b> 시점 · <b>WASD</b> 이동 · <b>Space</b> 점프 · <b>Enter</b> 시작 · <b>Esc</b> 잠금 해제 · <b>M</b> 음악 끄기/켜기</p>
       <button id="hint-close">처음 화면</button>
     </aside>
 
