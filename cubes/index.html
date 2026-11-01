@@ -6,28 +6,42 @@
     <meta name="theme-color" content="#3aa6d8" />
     <meta http-equiv="Cache-Control" content="no-cache" />
     <link rel="icon" type="image/png" href="./cube-icon-192.png" />
-    <title>큐브 레인 VR</title>
-    <script type="module" crossorigin src="./assets/index-j7AMk5qL.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C6gHZ6O7.css">
+    <title>큐브 레인 런 VR</title>
+    <script type="module" crossorigin src="./assets/index-CGmy8tNv.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-1BTMX6rO.css">
   </head>
   <body>
     <div id="app"></div>
-    <div id="hud" hidden></div>
+    <div id="hud" hidden>
+      <div class="hud-bar-track" aria-hidden="true"><div id="hud-bar"></div></div>
+      <strong id="hud-dist">0m</strong>
+      <span id="hud-sub"></span>
+    </div>
+    <button id="sound-btn" class="sound-btn" type="button" hidden>소리</button>
+    <section id="sound-panel" class="sound-panel" hidden aria-label="볼륨">
+      <label class="vol"><span>배경음악</span><input class="vol-music" type="range" min="0" max="100" step="1" /><b class="vol-music-val"></b></label>
+      <label class="vol"><span>효과음</span><input class="vol-sfx" type="range" min="0" max="100" step="1" /><b class="vol-sfx-val"></b></label>
+      <button id="sound-close" type="button" class="small">닫기</button>
+    </section>
     <div id="crosshair" hidden aria-hidden="true"></div>
     <p id="lock-hint" hidden>화면을 클릭하면 마우스로 시점을 돌릴 수 있어요 · Esc 로 해제</p>
 
     <section id="overlay" aria-labelledby="title">
       <div class="card">
-        <p class="kicker">Meta Quest 2 · WebXR 게임 · Frozen Sky <span class="ver">v0.5 · 배경음악</span></p>
-        <h1 id="title">큐브 레인</h1>
-        <p class="lead">하얗게 얼어붙은 세상, 구름 한 점 없는 시안 하늘에서 디지털 큐브가 쏟아집니다. 크기도 모양도 제각각. 머리·몸·손 어디든 한 번이라도 닿으면 그대로 얼어붙어요.</p>
+        <p class="kicker">Meta Quest 2 · WebXR 게임 · Frozen Sky <span class="ver">v0.6 · 런</span></p>
+        <h1 id="title">큐브 레인: 런</h1>
+        <p class="lead">하얗게 얼어붙은 세상을 끝없이 달리세요. 뒤에서 얼음 벽이 점점 빨라지며 쫓아오고, 하늘에서는 크기도 모양도 제각각인 디지털 큐브가 쏟아집니다. 멈추면 벽에 얼어붙고, 큐브에 한 번이라도 닿아도 끝이에요.</p>
         <dl class="keys">
           <div><dt>트리거</dt><dd>시작 · 다시 시작</dd></div>
           <div><dt>A</dt><dd>점프</dd></div>
-          <div><dt>왼 스틱</dt><dd>이동 (몸을 직접 움직여 피해도 돼요)</dd></div>
+          <div><dt>왼 스틱</dt><dd>위로 밀면 달리기 · 좌우로 비켜서기</dd></div>
           <div><dt>오른 스틱</dt><dd>좌우 30° 회전</dd></div>
           <div><dt>바닥 표시</dt><dd>시안 사각형이 짙어질수록 곧 떨어질 자리</dd></div>
         </dl>
+        <div class="vols" aria-label="볼륨">
+          <label class="vol"><span>배경음악</span><input class="vol-music" type="range" min="0" max="100" step="1" /><b class="vol-music-val"></b></label>
+          <label class="vol"><span>효과음</span><input class="vol-sfx" type="range" min="0" max="100" step="1" /><b class="vol-sfx-val"></b></label>
+        </div>
         <p class="music-credit">♪ 배경음악 — 「Alice in 냉동고 (Instrumental, extended)」 · 시작하면 흘러나와요</p>
         <p class="safety">주변 1.5m 안에 부딪힐 물건이 없는지 확인하고, 가디언 경계를 설정해 주세요.</p>
         <p id="status" class="status" role="status"></p>
@@ -39,7 +53,7 @@
     </section>
 
     <aside id="hint" hidden>
-      <p><b>클릭</b> 마우스 잠금·시작 · <b>마우스</b> 시점 · <b>WASD</b> 이동 · <b>Space</b> 점프 · <b>Enter</b> 시작 · <b>Esc</b> 잠금 해제 · <b>M</b> 음악 끄기/켜기</p>
+      <p><b>W</b> 달리기 · <b>A/D</b> 비켜서기 · <b>마우스</b> 시점 · <b>Space</b> 점프 · <b>클릭/Enter</b> 시작 · <b>V</b> 볼륨 · <b>M</b> 음악 끄기 · <b>Esc</b> 잠금 해제</p>
       <button id="hint-close">처음 화면</button>
     </aside>
 
